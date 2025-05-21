@@ -137,7 +137,7 @@ def run_mbti_tree_app():
                 if st.session_state.index >= len(questions):
                     st.session_state.page = "result"
 
-                st.experimental_rerun()  # pakai experimental_rerun() yang lebih stabil
+                st.rerun()
 
     if st.session_state.get("page") == "result":
         answers = st.session_state.answers
