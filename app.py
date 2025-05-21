@@ -107,26 +107,51 @@ def run_mbti_tree_app():
             st.subheader(f"Soal {index+1}/{len(questions)}")
             st.write(q["text"])
 
-            if st.button("Setuju"):
-                st.session_state.answers.append(q["trait"][0])
-                st.session_state.index += 1
-                st.rerun()
-            if st.button("Tidak Setuju"):
-                opp = {"I": "E", "E": "I", "S": "N", "N": "S", "T": "F", "F": "T", "J": "P", "P": "J"}
-                st.session_state.answers.append(opp[q["trait"][0]])
-                st.session_state.index += 1
-                st.rerun()
-        else:
-            st.session_state.page = "result"
-            st.rerun()
+            # Skor untuk setiap opsi
+            options = {
+                "Sangat Tidak Setuju": -2,
+                "Tidak Setuju": -1,
+                "Netral": 0,
+                "Setuju": 1,
+                "Sangat Setuju": 2,
+            }
+
+            for label, score in options.items():
+                if st.button(label):
+                    # Trait dasar huruf kecil, misal 'i' dari q["trait"]
+                    trait = q["trait"][0].lower()
+
+                    # Kalau skor positif → trait asli, negatif → trait lawan
+                    opp = {"i": "e", "e": "i", "s": "n", "n": "s", "t": "f", "f": "t", "j": "p", "p": "j"}
+
+                    if score > 0:
+                        # Tambahkan skor ke trait asli (positive)
+                        st.session_state.answers.append((trait, score))
+                    elif score < 0:
+                        # Tambahkan skor ke trait lawan (negatif)
+                        st.session_state.answers.append((opp[trait], -score))
+                    else:
+                        # Netral, tidak menambah nilai trait
+                        pass  # bisa append None atau skip
+
+                    st.session_state.index += 1
+                    st.rerun()
+
 
     if st.session_state.get("page") == "result":
         answers = st.session_state.answers
-        traits = {"I": 0, "E": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 0}
-        for a in answers:
-            traits[a.upper()] += 1
+        traits = {"i": 0, "e": 0, "s": 0, "n": 0, "t": 0, "f": 0, "j": 0, "p": 0}
 
-        path_taken, mbti = traverse_tree_bfs(traits)
+        for ans in answers:
+            if ans is None:
+                continue
+            trait, score = ans
+            traits[trait] += score
+
+        # Karena tree pakai huruf kapital
+        traits_upper = {k.upper(): v for k, v in traits.items()}
+
+        path_taken, mbti = traverse_tree_bfs(traits_upper)
 
         st.success(f"{st.session_state.name}, hasil MBTI Anda adalah: **{mbti}**")
         
@@ -138,7 +163,6 @@ def run_mbti_tree_app():
         st.subheader("🔍 Jejak Keputusan Anda:")
         for dim, trait in path_taken:
             st.markdown(f"**{dim} → {trait}**")
-
 
 # Run
 if __name__ == "__main__":
