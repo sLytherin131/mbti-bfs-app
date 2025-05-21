@@ -107,7 +107,6 @@ def run_mbti_tree_app():
             st.subheader(f"Soal {index+1}/{len(questions)}")
             st.write(q["text"])
 
-            # Skor untuk setiap opsi
             options = {
                 "Sangat Tidak Setuju": -2,
                 "Tidak Setuju": -1,
@@ -116,27 +115,29 @@ def run_mbti_tree_app():
                 "Sangat Setuju": 2,
             }
 
-            for label, score in options.items():
-                if st.button(label):
-                    # Trait dasar huruf kecil, misal 'i' dari q["trait"]
-                    trait = q["trait"][0].lower()
+            # Gunakan radio untuk memilih jawaban
+            choice = st.radio("Pilih jawaban Anda:", list(options.keys()), key=f"answer_{index}")
 
-                    # Kalau skor positif → trait asli, negatif → trait lawan
-                    opp = {"i": "e", "e": "i", "s": "n", "n": "s", "t": "f", "f": "t", "j": "p", "p": "j"}
+            if st.button("Lanjutkan"):
+                trait = q["trait"][0].lower()
+                opp = {"i": "e", "e": "i", "s": "n", "n": "s", "t": "f", "f": "t", "j": "p", "p": "j"}
 
-                    if score > 0:
-                        # Tambahkan skor ke trait asli (positive)
-                        st.session_state.answers.append((trait, score))
-                    elif score < 0:
-                        # Tambahkan skor ke trait lawan (negatif)
-                        st.session_state.answers.append((opp[trait], -score))
-                    else:
-                        # Netral, tidak menambah nilai trait
-                        pass  # bisa append None atau skip
+                score = options[choice]
+                if score > 0:
+                    st.session_state.answers.append((trait, score))
+                elif score < 0:
+                    st.session_state.answers.append((opp[trait], -score))
+                else:
+                    # Netral tidak menambah trait apa pun
+                    pass
 
-                    st.session_state.index += 1
-                    st.rerun()
+                st.session_state.index += 1
 
+                # Jika sudah habis, pindah ke halaman hasil
+                if st.session_state.index >= len(questions):
+                    st.session_state.page = "result"
+
+                st.experimental_rerun()  # pakai experimental_rerun() yang lebih stabil
 
     if st.session_state.get("page") == "result":
         answers = st.session_state.answers
