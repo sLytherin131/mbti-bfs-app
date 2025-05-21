@@ -54,7 +54,7 @@ def traverse_tree_bfs(traits_count):
         node, path = queue.popleft()
 
         if node.dimension is None:
-            return path_taken, "".join(path + [node.trait])
+            return path_taken, "".join(path)
 
         # Determine dominant trait
         if node.dimension == "IE":
