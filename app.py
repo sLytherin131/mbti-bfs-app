@@ -177,9 +177,26 @@ def run_mbti_tree_app():
         desc = MBTI_DESCRIPTIONS.get(mbti, "Deskripsi tidak ditemukan.")
         st.info(desc)
         
+        trait_labels = {
+            "I": "Introvert", "E": "Extrovert",
+            "S": "Sensing", "N": "Intuition",
+            "T": "Thinking", "F": "Feeling",
+            "J": "Judging", "P": "Perceiving"
+        }
+
+        dimension_labels = {
+            "IE": "Introvert (I) / Extrovert (E)",
+            "SN": "Sensing (S) / Intuition (N)",
+            "TF": "Thinking (T) / Feeling (F)",
+            "JP": "Judging (J) / Perceiving (P)"
+        }
+
         st.subheader("🔍 Jejak Keputusan Anda:")
         for dim, trait in path_taken:
-            st.markdown(f"**{dim} → {trait}**")
+            full_trait = trait_labels.get(trait, trait)
+            dim_label = dimension_labels.get(dim, dim)
+            st.markdown(f"**{dim_label} → {full_trait}**")
+
 
 # Run
 if __name__ == "__main__":
