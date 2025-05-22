@@ -6,22 +6,22 @@ from questions import QUESTIONS_IE, QUESTIONS_SN, QUESTIONS_TF, QUESTIONS_JP
 
 # Deskripsi MBTI
 MBTI_DESCRIPTIONS = {
-    "INTJ": "INTJ (The Mastermind): Kamu adalah tipe yang suka berpikir mendalam dan strategis. Lebih nyaman sendiri karena di dalam kepalamu udah penuh rencana dan solusi. Kamu jago banget melihat pola, bikin strategi, dan menyelesaikan masalah rumit. Nggak suka basa-basi, kamu lebih suka hasil nyata. Karier ideal: musisi, penasihat keuangan, marketing manager, fotografer.",
-    "INTP": "INTP (The Thinker): Kamu adalah pemikir logis yang suka banget menganalisis segala hal. Otakmu jalan terus, selalu cari tahu kenapa sesuatu bisa terjadi. Kamu kreatif, imajinatif, dan sering punya ide-ide out of the box. Cocok banget kerja di bidang yang menantang intelektualmu. Karier ideal: web developer, komposer, konsultan pemasaran, produser, penulis, dosen.",
-    "ENTJ": "ENTJ (The Commander): Kamu lahir sebagai pemimpin. Kamu suka ngatur, merancang rencana, dan memastikan semuanya berjalan efisien. Tantangan adalah makanan harianmu, dan kamu nggak takut buat ambil tanggung jawab besar. Karier ideal: administrator bisnis, manajer konstruksi, astronom.",
-    "ENTP": "ENTP (The Visionary): Kamu itu penuh ide liar dan suka banget eksplor hal-hal baru. Logika jalan, tapi kamu juga senang diskusi yang seru dan menantang. Bosenan sama rutinitas, kamu butuh kerjaan yang fleksibel dan penuh tantangan intelektual. Karier ideal: pengacara, system analyst, financial planner, ilmuwan.",
-    "INFJ": "INFJ (The Advocate): Kamu tipe idealis dan pemikir yang dalam banget. Punya visi yang kuat dan sering berpikir soal gimana caranya bikin dunia jadi lebih baik. Kamu juga peka dan penuh empati. Karier ideal: psikolog, konselor, penulis, ilmuwan.",
-    "INFP": "INFP (The Mediator): Kamu pendiam tapi dunia dalam kepalamu penuh warna. Kamu suka merenung, punya nilai-nilai kuat, dan selalu ingin bikin perubahan positif. Kamu cocok di tempat yang tenang dan kreatif. Karier ideal: fotografer, seniman, artis, profesional kesehatan mental, copywriter.",
-    "ENFJ": "ENFJ (The Protagonist): Kamu punya kharisma alami dan selalu ingin bantu orang lain. Kamu suka terlibat dalam hubungan sosial dan bisa jadi inspirasi buat banyak orang. Energi kamu bikin lingkungan sekitarmu terasa hangat. Karier ideal: HR, public relations, sales, art director.",
-    "ENFP": "ENFP (The Campaigner): Kamu itu spontan, antusias, dan suka banget berekspresi. Kebebasan adalah hal yang kamu jaga banget. Kamu suka lingkungan yang dinamis dan penuh kreativitas. Karier ideal: reporter, musisi, pekerja sosial, editor.",
-    "ISTJ": "ISTJ (The Inspector): Kamu orangnya rapi, terorganisir, dan bisa diandalkan. Kamu suka sistem yang jelas dan kerja dengan aturan. Buat kamu, tanggung jawab itu bukan beban, tapi komitmen. Karier ideal: dokter gigi, akuntan, business analyst, programmer.",
-    "ISFJ": "ISFJ (The Defender): Kamu itu tipe yang perhatian banget sama orang lain. Kamu nggak suka konflik, lebih suka harmoni dan kerja di balik layar untuk bantu semuanya berjalan lancar. Karier ideal: guru TK, research analyst, staf keuangan, manajer administrasi.",
-    "ESTJ": "ESTJ (The Executive): Kamu tipe yang to the point dan suka segala sesuatu yang jelas. Kamu percaya sama sistem, tradisi, dan nilai-nilai yang kokoh. Pekerjaan yang butuh struktur dan kepemimpinan cocok banget buat kamu. Karier ideal: hakim, coach, petugas keuangan.",
-    "ESFJ": "ESFJ (The Consul): Kamu itu ramah, perhatian, dan suka banget membantu orang lain. Kamu senang saat semua orang di sekitarmu bahagia dan nyaman. Karier ideal: kurator museum, medical researcher, pekerja sosial.",
-    "ISTP": "ISTP (The Virtuoso): Kamu logis tapi juga spontan, suka tantangan teknis dan nyari solusi dari hal rumit. Kamu nggak suka banyak aturan, lebih senang kebebasan dan fleksibilitas. Karier ideal: teknisi, insinyur, polisi, pekerja konstruksi, ahli forensik.",
-    "ISFP": "ISFP (The Adventurer): Kamu hangat, lembut, dan punya jiwa seni yang tinggi. Kamu suka kebebasan buat berekspresi dan menikmati hal-hal baru. Nggak suka diatur, lebih suka ngikutin kata hati. Karier ideal: manajer media sosial, arkeolog, pekerja sosial, desainer.",
-    "ESTP": "ESTP (The Dynamo): Kamu penuh energi dan suka aksi. Kamu realistis, jago ambil keputusan cepat, dan senang ngadepin tantangan langsung. Dunia nyata adalah tempat bermainmu. Karier ideal: sutradara, project coordinator, pengusaha.",
-    "ESFP": "ESFP (The Entertainer): Kamu suka tampil, suka bersosialisasi, dan punya energi positif yang menular. Kamu senang jadi pusat perhatian dan berbagi kebahagiaan sama orang lain. Karier ideal: event planner, tour guide, pramugari."
+    "INTJ": "INTJ (The Mastermind): Kamu adalah tipe yang suka berpikir mendalam dan strategis. Lebih nyaman sendiri karena di dalam kepalamu udah penuh rencana dan solusi. Kamu jago banget melihat pola, bikin strategi, dan menyelesaikan masalah rumit. Nggak suka basa-basi, kamu lebih suka hasil nyata. Karier ideal kamu: musisi, penasihat keuangan, marketing manager, fotografer.",
+    "INTP": "INTP (The Thinker): Kamu adalah pemikir logis yang suka banget menganalisis segala hal. Otakmu jalan terus, selalu cari tahu kenapa sesuatu bisa terjadi. Kamu kreatif, imajinatif, dan sering punya ide-ide out of the box. Cocok banget kerja di bidang yang menantang intelektualmu. Karier ideal kamu: web developer, komposer, konsultan pemasaran, produser, penulis, dosen.",
+    "ENTJ": "ENTJ (The Commander): Kamu lahir sebagai pemimpin. Kamu suka ngatur, merancang rencana, dan memastikan semuanya berjalan efisien. Tantangan adalah makanan harianmu, dan kamu nggak takut buat ambil tanggung jawab besar. Karier ideal kamu: administrator bisnis, manajer konstruksi, astronom.",
+    "ENTP": "ENTP (The Visionary): Kamu itu penuh ide liar dan suka banget eksplor hal-hal baru. Logika jalan, tapi kamu juga senang diskusi yang seru dan menantang. Bosenan sama rutinitas, kamu butuh kerjaan yang fleksibel dan penuh tantangan intelektual. Karier ideal kamu: pengacara, system analyst, financial planner, ilmuwan.",
+    "INFJ": "INFJ (The Advocate): Kamu tipe idealis dan pemikir yang dalam banget. Punya visi yang kuat dan sering berpikir soal gimana caranya bikin dunia jadi lebih baik. Kamu juga peka dan penuh empati. Karier ideal kamu: psikolog, konselor, penulis, ilmuwan.",
+    "INFP": "INFP (The Mediator): Kamu pendiam tapi dunia dalam kepalamu penuh warna. Kamu suka merenung, punya nilai-nilai kuat, dan selalu ingin bikin perubahan positif. Kamu cocok di tempat yang tenang dan kreatif. Karier ideal kamu: fotografer, seniman, artis, profesional kesehatan mental, copywriter.",
+    "ENFJ": "ENFJ (The Protagonist): Kamu punya kharisma alami dan selalu ingin bantu orang lain. Kamu suka terlibat dalam hubungan sosial dan bisa jadi inspirasi buat banyak orang. Energi kamu bikin lingkungan sekitarmu terasa hangat. Karier ideal kamu: HR, public relations, sales, art director.",
+    "ENFP": "ENFP (The Campaigner): Kamu itu spontan, antusias, dan suka banget berekspresi. Kebebasan adalah hal yang kamu jaga banget. Kamu suka lingkungan yang dinamis dan penuh kreativitas. Karier ideal kamu: reporter, musisi, pekerja sosial, editor.",
+    "ISTJ": "ISTJ (The Inspector): Kamu orangnya rapi, terorganisir, dan bisa diandalkan. Kamu suka sistem yang jelas dan kerja dengan aturan. Buat kamu, tanggung jawab itu bukan beban, tapi komitmen. Karier ideal kamu: dokter gigi, akuntan, business analyst, programmer.",
+    "ISFJ": "ISFJ (The Defender): Kamu itu tipe yang perhatian banget sama orang lain. Kamu nggak suka konflik, lebih suka harmoni dan kerja di balik layar untuk bantu semuanya berjalan lancar. Karier ideal kamu: guru TK, research analyst, staf keuangan, manajer administrasi.",
+    "ESTJ": "ESTJ (The Executive): Kamu tipe yang to the point dan suka segala sesuatu yang jelas. Kamu percaya sama sistem, tradisi, dan nilai-nilai yang kokoh. Pekerjaan yang butuh struktur dan kepemimpinan cocok banget buat kamu. Karier ideal kamu: hakim, coach, petugas keuangan.",
+    "ESFJ": "ESFJ (The Consul): Kamu itu ramah, perhatian, dan suka banget membantu orang lain. Kamu senang saat semua orang di sekitarmu bahagia dan nyaman. Karier ideal kamu: kurator museum, medical researcher, pekerja sosial.",
+    "ISTP": "ISTP (The Virtuoso): Kamu logis tapi juga spontan, suka tantangan teknis dan nyari solusi dari hal rumit. Kamu nggak suka banyak aturan, lebih senang kebebasan dan fleksibilitas. Karier ideal kamu: teknisi, insinyur, polisi, pekerja konstruksi, ahli forensik.",
+    "ISFP": "ISFP (The Adventurer): Kamu hangat, lembut, dan punya jiwa seni yang tinggi. Kamu suka kebebasan buat berekspresi dan menikmati hal-hal baru. Nggak suka diatur, lebih suka ngikutin kata hati. Karier ideal kamu: manajer media sosial, arkeolog, pekerja sosial, desainer.",
+    "ESTP": "ESTP (The Dynamo): Kamu penuh energi dan suka aksi. Kamu realistis, jago ambil keputusan cepat, dan senang ngadepin tantangan langsung. Dunia nyata adalah tempat bermainmu. Karier ideal kamu: sutradara, project coordinator, pengusaha.",
+    "ESFP": "ESFP (The Entertainer): Kamu suka tampil, suka bersosialisasi, dan punya energi positif yang menular. Kamu senang jadi pusat perhatian dan berbagi kebahagiaan sama orang lain. Karier ideal kamu: event planner, tour guide, pramugari."
 }
 
 # Decision tree node class
@@ -78,7 +78,7 @@ def traverse_tree_bfs(traits_count):
 def run_mbti_tree_app():
     st.title("🧠 Tes Kepribadian MBTI")
 
-    name = st.text_input("Nama Anda")
+    name = st.text_input("Nama Kamu")
     phone = st.text_input("Nomor HP (08xxxx)")
 
     # Validasi format nomor telepon
@@ -170,7 +170,7 @@ def run_mbti_tree_app():
 
         path_taken, mbti = traverse_tree_bfs(traits_upper)
 
-        st.success(f"{st.session_state.name}, hasil MBTI Anda adalah: **{mbti}**")
+        st.success(f"{st.session_state.name}, hasil MBTI Kamu adalah: **{mbti}**")
         
         # Tampilkan deskripsi lengkap
         st.subheader("📝 Deskripsi MBTI")
@@ -191,7 +191,7 @@ def run_mbti_tree_app():
             "JP": "Judging (J) / Perceiving (P)"
         }
 
-        st.subheader("🔍 Jejak Keputusan Anda:")
+        st.subheader("🔍 Jejak Keputusan Kamu:")
         for dim, trait in path_taken:
             full_trait = trait_labels.get(trait, trait)
             dim_label = dimension_labels.get(dim, dim)
