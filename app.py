@@ -5,22 +5,22 @@ from questions import QUESTIONS_IE, QUESTIONS_SN, QUESTIONS_TF, QUESTIONS_JP
 
 # Deskripsi MBTI
 MBTI_DESCRIPTIONS = {
-    "INTJ": "INTJ (The Mastermind): Analitis, strategis, dan memiliki visi jangka panjang.",
-    "INTP": "INTP (The Thinker): Logis, penuh rasa ingin tahu, dan senang mengeksplorasi ide.",
-    "ENTJ": "ENTJ (The Commander): Pemimpin alami, tegas, dan berorientasi pada hasil.",
-    "ENTP": "ENTP (The Visionary): Inovatif, suka tantangan, dan komunikatif.",
-    "INFJ": "INFJ (The Advocate): Idealistik, empatik, dan memiliki kompas moral kuat.",
-    "INFP": "INFP (The Mediator): Reflektif, kreatif, dan berorientasi pada nilai.",
-    "ENFJ": "ENFJ (The Protagonist): Karismatik, suportif, dan mampu memimpin dengan empati.",
-    "ENFP": "ENFP (The Campaigner): Antusias, imajinatif, dan fleksibel.",
-    "ISTJ": "ISTJ (The Inspector): Teliti, bertanggung jawab, dan menghargai struktur.",
-    "ISFJ": "ISFJ (The Defender): Setia, perhatian, dan suka membantu.",
-    "ESTJ": "ESTJ (The Executive): Praktis, tegas, dan suka mengatur.",
-    "ESFJ": "ESFJ (The Consul): Sosial, hangat, dan peduli terhadap kebutuhan orang lain.",
-    "ISTP": "ISTP (The Virtuoso): Mandiri, logis, dan senang memecahkan masalah teknis.",
-    "ISFP": "ISFP (The Adventurer): Sensitif, artistik, dan menyukai kebebasan.",
-    "ESTP": "ESTP (The Dynamo): Energik, spontan, dan cepat bertindak.",
-    "ESFP": "ESFP (The Entertainer): Ramah, ekspresif, dan menikmati momen.",
+    "INTJ": "INTJ (The Mastermind): Pendiam, nyaman bekerja sendiri, dan sangat baik dalam memecahkan masalah. Mereka memiliki pemikiran strategis dan cenderung berpikir secara intuitif dan praktis. Karier ideal: musisi, penasihat keuangan, marketing manager, fotografer.",
+    "INTP": "INTP (The Thinker): Sangat logis, suka pola, dan cepat memahami perbedaan. Kreatif dan fokus mencari solusi tepat. Karier ideal: web developer, komposer, konsultan pemasaran, produser, penulis, dosen.",
+    "ENTJ": "ENTJ (The Commander): Pemimpin alami, fokus pada logika dan efisiensi. Mereka menyukai tantangan dan bertanggung jawab atas hasil. Karier ideal: administrator bisnis, manajer konstruksi, astronom.",
+    "ENTP": "ENTP (The Visionary): Cerdas secara logis dan lebih tertarik pada ide besar daripada rutinitas. Menyukai pemecahan masalah dan pekerjaan konseptual. Karier ideal: pengacara, system analyst, financial planner, ilmuwan.",
+    "INFJ": "INFJ (The Advocate): Seorang idealis dan pemikir mendalam yang dipenuhi ide dan imajinasi. Karier ideal: psikolog, konselor, penulis, ilmuwan.",
+    "INFP": "INFP (The Mediator): Pendiam, suka menyendiri di tempat tenang, dan berorientasi pada pembelajaran serta perubahan dunia. Karier ideal: fotografer, seniman, artis, profesional kesehatan mental, copywriter.",
+    "ENFJ": "ENFJ (The Protagonist): Ekstrovert yang idealis dan sangat etis. Mereka tahu cara berhubungan dengan orang lain dan ingin membuat dunia lebih baik. Karier ideal: HR, public relations, sales, art director.",
+    "ENFP": "ENFP (The Campaigner): Individualis yang kreatif dan suka kebebasan berekspresi. Karier ideal: reporter, musisi, pekerja sosial, editor.",
+    "ISTJ": "ISTJ (The Inspector): Pendiam, logis, dan nyaman bekerja sendiri atau dalam tim kecil. Menyukai struktur dan tanggung jawab. Karier ideal: dokter gigi, akuntan, business analyst, programmer.",
+    "ISFJ": "ISFJ (The Defender): Baik hati, peka terhadap orang lain, dan menghargai keharmonisan. Karier ideal: guru TK, research analyst, staf keuangan, manajer administrasi.",
+    "ESTJ": "ESTJ (The Executive): Terorganisir, jujur, dan percaya pada norma sosial. Karier ideal: hakim, coach, petugas keuangan.",
+    "ESFJ": "ESFJ (The Consul): Supel dan suka berinteraksi dengan orang lain. Ingin membuat orang bahagia dan menciptakan tatanan sosial. Karier ideal: kurator museum, medical researcher, pekerja sosial.",
+    "ISTP": "ISTP (The Virtuoso): Rasional dan logis, namun juga bisa spontan. Menyukai tugas teknis dan cepat mencari solusi. Karier ideal: teknisi, insinyur, polisi, pekerja konstruksi, ahli forensik.",
+    "ISFP": "ISFP (The Adventurer): Terlihat hangat dan ramah, senang bereksplorasi dan menikmati pengalaman baru. Karier ideal: manajer media sosial, arkeolog, pekerja sosial, desainer.",
+    "ESTP": "ESTP (The Dynamo): Energik, logis, dan suka kebebasan. Mereka menggunakan data untuk pengambilan keputusan. Karier ideal: sutradara, project coordinator, pengusaha.",
+    "ESFP": "ESFP (The Entertainer): Suka berada di depan publik, hangat, dan senang berbagi pengetahuan. Karier ideal: event planner, tour guide, pramugari."
 }
 
 # Decision tree node class
