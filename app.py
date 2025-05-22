@@ -1,5 +1,6 @@
 import streamlit as st
 import random
+import re
 from collections import deque
 from questions import QUESTIONS_IE, QUESTIONS_SN, QUESTIONS_TF, QUESTIONS_JP
 
@@ -75,21 +76,36 @@ def traverse_tree_bfs(traits_count):
 
 # App logic
 def run_mbti_tree_app():
-    st.title("🧠 Tes Kepribadian MBTI dengan Pohon Keputusan")
+    st.title("🧠 Tes Kepribadian MBTI")
 
     name = st.text_input("Nama Anda")
     phone = st.text_input("Nomor HP (08xxxx)")
+
+    # Validasi format nomor telepon
+    phone_valid = re.match(r'^08\d{8,11}$', phone) is not None
+
+    if not phone_valid and phone:
+        st.error("Nomor HP harus dimulai dengan '08' dan memiliki 10-13 digit angka.")
+
     num_questions = st.slider("Jumlah Soal", 16, 64, 32, step=4)
 
     if st.button("Mulai Tes"):
         if not name or not phone:
             st.warning("Mohon isi nama dan nomor HP terlebih dahulu.")
             return
+        if not phone_valid:
+            st.warning("Format nomor HP tidak valid. Harus dimulai dengan '08' dan berisi 10-13 digit.")
+            return
 
         all_questions = QUESTIONS_IE + QUESTIONS_SN + QUESTIONS_TF + QUESTIONS_JP
         random.seed(1)
         random.shuffle(all_questions)
-        questions = all_questions[:num_questions]
+        per_dim = num_questions // 4
+        questions = random.sample(QUESTIONS_IE, per_dim) + \
+                    random.sample(QUESTIONS_SN, per_dim) + \
+                    random.sample(QUESTIONS_TF, per_dim) + \
+                    random.sample(QUESTIONS_JP, per_dim)
+        random.shuffle(questions)  # Baru diacak seluruhnya
 
         st.session_state.questions = questions
         st.session_state.index = 0
